@@ -1,0 +1,45 @@
+.pjl-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pjl-status {
+  padding: 24px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.pjl-status--error {
+  color: #b91c1c;
+}
+
+.pjl-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: linear-gradient(135deg, #1b75bb, #00adee);
+}
+
+.pjl-badge--enterprise {
+  background: linear-gradient(135deg, #00adee, #1b75bb);
+  box-shadow: 0 4px 10px rgba(27, 117, 187, 0.25);
+}
+
+.pjl-badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.85;
+}

@@ -1,0 +1,8 @@
+{
+  "source": "https://raw.githubusercontent.com/mledoze/countries/master/countries.json",
+  "countryCount": 249,
+  "clusterCount": 30,
+  "skipCodes": [
+    "AQ"
+  ]
+}

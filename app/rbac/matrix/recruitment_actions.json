@@ -1,0 +1,1184 @@
+{
+  "module": "recruitment",
+  "version": 1,
+  "rules": "Only yes or no. Any former Full/Team/Own/Assigned/Config value is stored as yes. Missing role on an action defaults to no.",
+  "denied_message": "You are not authorized to view this section. Please contact your Super Admin, Manager, or HR team for access.",
+  "actions": {
+    "auth.signin_hr": {
+      "label": "Sign in to the HR dashboard",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "yes",
+        "it_admin_ops": "yes",
+        "bgv_vendor": "no",
+        "viewer": "yes"
+      }
+    },
+    "auth.signin_bgv": {
+      "label": "Sign in to the BGV vendor portal",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "yes",
+        "viewer": "no"
+      }
+    },
+    "auth.signin_sso": {
+      "label": "Sign in using the company email domain",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "yes",
+        "it_admin_ops": "yes",
+        "bgv_vendor": "no",
+        "viewer": "yes"
+      }
+    },
+    "auth.2fa_required": {
+      "label": "Two-factor authentication required",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "yes",
+        "it_admin_ops": "yes",
+        "bgv_vendor": "yes",
+        "viewer": "yes"
+      }
+    },
+    "dashboard.org_view": {
+      "label": "View the organisation dashboard",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "yes"
+      }
+    },
+    "reports.funnel_pipeline": {
+      "label": "View hiring funnel and pipeline reports",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "yes"
+      }
+    },
+    "requests.view_own": {
+      "label": "View own requests and their status",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "yes",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "reports.team_reports": {
+      "label": "View team reports",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "yes"
+      }
+    },
+    "reports.applicant_location": {
+      "label": "View applicant location analytics",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "yes"
+      }
+    },
+    "dashboard.notification_delivery": {
+      "label": "View notification delivery dashboard",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "reports.export": {
+      "label": "Export reports",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "requests.raise": {
+      "label": "Raise a hiring request",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "yes",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "requests.cancel": {
+      "label": "Cancel a hiring request",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "yes",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "requests.approve_reject": {
+      "label": "Approve or reject a hiring request",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "jobs.draft": {
+      "label": "Create and edit a job as a draft",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "yes",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "jobs.ai_generate": {
+      "label": "Use AI job description generation",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "yes",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "jobs.config_screening_qs": {
+      "label": "Configure screening questions and their order",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "jobs.config_weightage": {
+      "label": "Configure screening weightage",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "jobs.submit_approval": {
+      "label": "Submit a job for approval",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "yes",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "jobs.publish": {
+      "label": "Publish a job",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "jobs.unpublish": {
+      "label": "Unpublish or close a job",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "jobs.delete_permanently": {
+      "label": "Delete a job permanently",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "no",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "jobs.share": {
+      "label": "Share a job externally",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "jobs.manage_question_bank": {
+      "label": "Manage the question bank and templates",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "candidates.view_list": {
+      "label": "View the applicant list and profiles",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "yes",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "yes"
+      }
+    },
+    "candidates.view_contact": {
+      "label": "View candidate contact details",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "candidates.view_ai_score": {
+      "label": "View AI match score and reasoning",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "yes"
+      }
+    },
+    "candidates.view_assessment": {
+      "label": "View assessment answers and scores",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "yes"
+      }
+    },
+    "candidates.notes_add": {
+      "label": "Add recruiter notes",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "candidates.notes_edit_delete": {
+      "label": "Edit or delete a recruiter note",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "candidates.approve_reject": {
+      "label": "Approve or reject a candidate",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "candidates.view_shortlisted": {
+      "label": "View the approved and shortlisted list",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "yes",
+        "it_admin_ops": "no",
+        "bgv_vendor": "yes",
+        "viewer": "yes"
+      }
+    },
+    "candidates.bulk_actions": {
+      "label": "Perform bulk actions on candidates",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "candidates.export": {
+      "label": "Export candidate data",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "candidates.request_info": {
+      "label": "Request further information from a candidate",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "interviews.schedule": {
+      "label": "Schedule or reschedule an interview",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "interviews.assign_panel": {
+      "label": "Assign an interviewer to a panel",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "interviews.set_availability": {
+      "label": "Set own interview availability slots",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "interviews.submit_feedback": {
+      "label": "Submit interview feedback",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "interviews.view_recordings": {
+      "label": "View interview recordings and transcripts",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "interviews.cancel": {
+      "label": "Cancel an interview",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "communication.whatsapp": {
+      "label": "Send a WhatsApp message to a candidate",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "communication.voice_call": {
+      "label": "Trigger a voice call to a candidate",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "communication.view_timeline": {
+      "label": "View the candidate communication timeline",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "communication.manage_escalation": {
+      "label": "Manage the escalation queue",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "communication.config_templates": {
+      "label": "Configure notification templates and triggers",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "communication.receive_alerts": {
+      "label": "Receive HR alerts on WhatsApp",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "offers.send": {
+      "label": "Send an offer or selection decision",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "offers.withdraw": {
+      "label": "Withdraw or revoke an offer",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "onboarding.release_form": {
+      "label": "Release the pre-onboarding form",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "onboarding.view_submissions": {
+      "label": "View pre-onboarding form submissions",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "yes",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "bgv.initiate": {
+      "label": "Initiate a BGV",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "bgv.assign_vendor": {
+      "label": "Assign a BGV case to a vendor",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "bgv.request_document": {
+      "label": "Raise a BGV document request",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "yes",
+        "viewer": "no"
+      }
+    },
+    "bgv.check_download": {
+      "label": "Check and download BGV documents",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "yes",
+        "viewer": "no"
+      }
+    },
+    "bgv.update_status": {
+      "label": "Update BGV status and upload the result",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "yes",
+        "viewer": "no"
+      }
+    },
+    "bgv.add_status_attachment": {
+      "label": "Add a status update with an attachment",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "yes",
+        "viewer": "no"
+      }
+    },
+    "bgv.view_report": {
+      "label": "View the full BGV report",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "yes",
+        "viewer": "no"
+      }
+    },
+    "bgv.view_outcome": {
+      "label": "View the BGV outcome (cleared or not cleared)",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "yes",
+        "viewer": "no"
+      }
+    },
+    "bgv.accept_close": {
+      "label": "Accept or close a BGV outcome",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "it.create_emp_id": {
+      "label": "Create an employee ID",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "yes",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "it.create_email": {
+      "label": "Create an IT email account",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "yes",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "it.create_system_access": {
+      "label": "Create system and admin access for a joiner",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "yes",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "it.allocate_project": {
+      "label": "Allocate a joiner to a project",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "yes",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "it.map_roles": {
+      "label": "Map an employee to their module roles",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "yes",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "it.clone_roles": {
+      "label": "Clone roles from an existing employee",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "yes",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "admin.manage_templates": {
+      "label": "Manage NDA and onboarding templates",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "team.invite": {
+      "label": "Invite a team member",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "team.approve_invite": {
+      "label": "Approve an invited member",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "no",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "team.change_role": {
+      "label": "Change a member's role",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "team.deactivate": {
+      "label": "Deactivate or reactivate a member",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "team.bulk_assign_roles": {
+      "label": "Assign roles to several employees at once",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "yes",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "team.set_module_roles": {
+      "label": "Set module-level roles for a person",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "yes",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "admin.transfer_sa": {
+      "label": "Transfer the Super Admin role",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "no",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "admin.grant_bgv_access": {
+      "label": "Grant or revoke BGV vendor access",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "admin.delegate_perms": {
+      "label": "Delegate own permissions temporarily",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "org.settings": {
+      "label": "Change organisation settings",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "no",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "org.manage_domains": {
+      "label": "Manage email domains and verification",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "no",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "org.config_score_matrix": {
+      "label": "Configure the profile score matrix",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "no",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "org.config_credits": {
+      "label": "Configure credit rules and the reward catalogue",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "no",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "org.manage_integrations": {
+      "label": "Manage integrations and messaging providers",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "no",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "org.manage_billing": {
+      "label": "Manage billing and seat count",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "no",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "org.kill_switch": {
+      "label": "Use the global notification kill switch",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "no",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "audit.view": {
+      "label": "View the audit log",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "yes",
+        "it_admin_ops": "yes",
+        "bgv_vendor": "yes",
+        "viewer": "no"
+      }
+    },
+    "audit.export": {
+      "label": "Export the audit log",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "no",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "privacy.handle_dsr": {
+      "label": "Handle a candidate data-subject request",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "privacy.play_recordings": {
+      "label": "Play or download a call recording",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "privacy.delete_record": {
+      "label": "Permanently delete a record",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "no",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "security.access_review": {
+      "label": "Run a periodic access review",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "no",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "analytics.view": {
+      "label": "View Job Performance Analytics",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "yes",
+        "it_admin_ops": "yes",
+        "bgv_vendor": "yes",
+        "viewer": "yes"
+      }
+    },
+    "reports.view": {
+      "label": "View reports",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "yes"
+      }
+    },
+    "jobs.config_technical_interview": {
+      "label": "Configure technical interview settings for a job",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "technical_interview.extend": {
+      "label": "Extend a technical interview deadline",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "technical_interview.reopen": {
+      "label": "Reopen a technical interview",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "technical_interview.reject": {
+      "label": "Reject a candidate after technical interview postponement",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "offers.manage": {
+      "label": "Manage offers",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "bgv.control": {
+      "label": "Control BGV workflow",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "yes",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "no",
+        "viewer": "no"
+      }
+    },
+    "bgv.assigned": {
+      "label": "Work assigned BGV cases",
+      "roles": {
+        "super_admin": "yes",
+        "content_admin": "yes",
+        "manager": "no",
+        "user": "no",
+        "it_admin_ops": "no",
+        "bgv_vendor": "yes",
+        "viewer": "no"
+      }
+    }
+  }
+}

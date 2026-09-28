@@ -1,0 +1,76 @@
+{
+  "source": "RecruitAssist role catalogue (permission sheet)",
+  "version": 1,
+  "roles": [
+    {
+      "role_id": "super_admin",
+      "label": "Super Admin",
+      "designation": "Recruitment Head / HR Head / Management",
+      "data_access": "Organisation-wide",
+      "functional": "Can do everything Content Admin can, plus deletion, plus organisation configuration, plus team & role administration.",
+      "notes": "The account owner. Powers nobody else should have: organisation settings, domain management, role administration, deletion, audit export.",
+      "hierarchy": "ladder",
+      "ladder_rank": 3
+    },
+    {
+      "role_id": "content_admin",
+      "label": "Content Admin",
+      "designation": "Recruitment Manager / HR Manager / Recruiter / HR",
+      "data_access": "Organisation-wide operational",
+      "functional": "Can do everything Manager can, plus edit across the organisation, publish, plus offer & BGV control.",
+      "notes": "Day-to-day operator. Replaces previous Recruiter Login.",
+      "hierarchy": "ladder",
+      "ladder_rank": 2
+    },
+    {
+      "role_id": "manager",
+      "label": "Manager",
+      "designation": "Lead / Manager / Domain Head / Interviewer",
+      "data_access": "Own team and own requisitions only (stored as Yes for allowed actions)",
+      "functional": "Can do everything User can, plus approve/reject within their team, plus view their team's reports.",
+      "notes": "Approving line manager and interviewer. Sees their team's hiring, not the whole organisation (Yes/No matrix collapses scope to Yes).",
+      "hierarchy": "ladder",
+      "ladder_rank": 1
+    },
+    {
+      "role_id": "user",
+      "label": "User",
+      "designation": "Employee - Associate / Senior Associate",
+      "data_access": "Own records only (stored as Yes for allowed actions)",
+      "functional": "Base. Can raise and cancel their own requests and see status of what they raised.",
+      "notes": "The requester. Employee who needs a hire approved or is referred in. No access to anyone else's data.",
+      "hierarchy": "ladder",
+      "ladder_rank": 0
+    },
+    {
+      "role_id": "it_admin_ops",
+      "label": "IT & Admin Ops",
+      "designation": "IT Team / Admin Team",
+      "data_access": "Provisioning tasks only, post-hire",
+      "functional": "Not part of the recruitment hierarchy. Separate functional role limited to onboarding provisioning.",
+      "notes": "Closes a security gap — separates system access creation (email, role mapping tooling) from User.",
+      "hierarchy": "functional",
+      "ladder_rank": null
+    },
+    {
+      "role_id": "bgv_vendor",
+      "label": "BGV Vendor",
+      "designation": "External background verification partner",
+      "data_access": "Assigned BGV cases only (stored as Yes for allowed actions)",
+      "functional": "Not part of the recruitment hierarchy. Access to nothing except BGV cases assigned to them.",
+      "notes": "External party. Sees candidate documents needed for verification. No jobs, other candidates, or general dashboard.",
+      "hierarchy": "functional",
+      "ladder_rank": null
+    },
+    {
+      "role_id": "viewer",
+      "label": "Viewer",
+      "designation": "Leadership / Finance / Internal Audit",
+      "data_access": "Read-only, organisation-wide",
+      "functional": "Read only. Cannot take any actions.",
+      "notes": "Keep for leadership and auditors who need visibility without change rights.",
+      "hierarchy": "functional",
+      "ladder_rank": null
+    }
+  ]
+}
